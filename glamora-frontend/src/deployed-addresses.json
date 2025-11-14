@@ -1,0 +1,13 @@
+{
+  "network": "Moonbase Alpha (Polkadot Testnet)",
+  "chainId": 1287,
+  "contracts": {
+    "GlamoraHub": "0x4fe1D1b42E734c52365C0DdF2C94bf34f6e07115",
+    "CreatorProfile": "0x7bC15c4bdb14E6ec5fA8E214e3B75933869247Fe",
+    "ContentPayment": "0x86eC3e58B69e9975d572d099814c2F470E18b2e6"
+  },
+  "deployer": "0x05d0519aaD78605a9998bcDa0162fCE586c5dFfF",
+  "explorer": "https://moonbase.moonscan.io",
+  "rpc": "https://rpc.api.moonbase.moonbeam.network",
+  "deployedAt": "2024-11-12"
+}
