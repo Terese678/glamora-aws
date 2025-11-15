@@ -301,6 +301,30 @@ Both fully viewable on IPFS!
 
 ---
 
+## Screenshots
+
+### Landing Page
+![Landing Page](./images/landing-page.png)
+*Welcome screen with wallet connection*
+
+### Creator Dashboard  
+![Creator Dashboard](./images/creator-dashboard.png)
+*Upload and manage fashion content*
+
+### Explore Page
+![Explore Content](./images/explore-page.png)
+*Browse available content*
+
+### Content Modal
+![Content Detail](./images/content-modal.png)
+*Purchase and view content details*
+
+### IPFS Verification
+![IPFS on Pinata](./images/pinata.png)
+*Content stored and verified on IPFS via Pinata*
+```
+---
+
 ## Build Journey
 
 ### Weeks 1-2: Smart Contracts
