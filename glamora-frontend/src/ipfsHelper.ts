@@ -5,49 +5,40 @@ const PINATA_SECRET_KEY = import.meta.env.VITE_PINATA_SECRET_KEY;
 
 export const uploadToIPFS = async (file: File): Promise<string> => {
   try {
+    console.log('📤 Uploading to IPFS...');
+    console.log('🔑 API Key exists:', !!PINATA_API_KEY);
+    console.log('🔑 Secret exists:', !!PINATA_SECRET_KEY);
+    console.log('📁 File:', file.name, file.size, 'bytes');
+
     const formData = new FormData();
     formData.append('file', file);
 
-    const metadata = JSON.stringify({
-      name: file.name,
-      keyvalues: {
-        platform: 'Glamora',
-        timestamp: Date.now().toString()
-      }
-    });
-    formData.append('pinataMetadata', metadata);
-
-    const options = JSON.stringify({
-      cidVersion: 0,
-    });
-    formData.append('pinataOptions', options);
-
+    // ✅ USE API KEY + SECRET (Old method but reliable)
     const response = await axios.post(
       'https://api.pinata.cloud/pinning/pinFileToIPFS',
       formData,
       {
-        maxBodyLength: Infinity,
         headers: {
-          'Content-Type': `multipart/form-data`,
           'pinata_api_key': PINATA_API_KEY,
-          'pinata_secret_api_key': PINATA_SECRET_KEY
-        }
+          'pinata_secret_api_key': PINATA_SECRET_KEY,
+        },
+        maxBodyLength: Infinity,
       }
     );
 
-    console.log('✅ File uploaded to IPFS:', response.data.IpfsHash);
+    console.log('✅ Upload successful!');
+    console.log('IPFS Hash:', response.data.IpfsHash);
+    
     return response.data.IpfsHash;
-  } catch (error) {
-    console.error('❌ Error uploading to IPFS:', error);
+  } catch (error: any) {
+    console.error('❌ UPLOAD FAILED');
+    console.error('Status:', error.response?.status);
+    console.error('Error:', error.response?.data);
+    console.error('Message:', error.message);
     throw new Error('Failed to upload to IPFS');
   }
 };
 
-export const getIPFSUrl = (hash: string): string => {
-
-  const cleanHash = hash.replace('ipfs://', '');
-  
-  // Use Pinata's public gateway
-  return `https://gateway.pinata.cloud/ipfs/${cleanHash}`;
+export const getIPFSUrl = (cid: string): string => {
+  return `https://gateway.pinata.cloud/ipfs/${cid}`;
 };
-
