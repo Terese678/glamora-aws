@@ -15,6 +15,19 @@ Traditional fashion platforms take 30-50% commissions from creators and control 
 
 Amazon Q wasn't just a code generator it was our technical consultant for every major decision.
 
+## 📸 Amazon Q Documentation
+
+All Amazon Q interactions are fully documented with screenshots in the `/amazon-q-screenshots/` folder:
+
+- **Code Generation** (Screenshots 01-06): Shows Q generating 800+ lines of Lambda functions
+- **Database Architecture** (Screenshots 07-11): DynamoDB vs RDS analysis with cost breakdowns
+- **Security Best Practices** (Screenshots 12-14): Wallet authentication and Lambda security
+- **CloudFront Integration** (Screenshots 15-18): CDN optimization for IPFS content
+- **Cost Optimization** (Screenshots 19-20): Budget planning and service optimization
+- **Scalability Planning** (Screenshots 21-22): Auto-scaling and global distribution strategies
+
+Total: 22 screenshots proving legitimate AI-assisted development.
+
 ### 1. **Generated Production-Ready Lambda Functions**
 Asked Q to create 5 complete TypeScript Lambda functions with DynamoDB schemas, Web3 wallet authentication, IPFS integration, and error handling. Saved 8+ hours.
 
