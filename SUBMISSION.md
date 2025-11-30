@@ -72,9 +72,8 @@ Q helped architect auto-scaling from 10k to 100k+ users with cost projections at
 
 ## Demo & Links
 
-**Live Demo:** [Coming Soon - Deploy in Progress]  
+**Live Demo:**  https://youtu.be/DcM0-cE0DY8 
 **GitHub:** https://github.com/Terese678/glamora-aws  
-**Video:** [Recording in Progress]
 
 **Test it:** Requires MetaMask + Sepolia testnet
 
